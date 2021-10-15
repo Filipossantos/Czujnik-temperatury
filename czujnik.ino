@@ -1,47 +1,39 @@
 #include <DHT.h>
 #include <ESP8266WiFi.h>
 
-const char* ssid     = "Orange_Swiatlowod_B18A"; 
-const char* password = "RLWW2604991"; 
-
+const char* ssid     = "Orange_Swiatlowod_B18A";  // ssid sieci
+const char* password = "RLWW2604991";  // haslo
 int pin = 2;
-
 WiFiServer server(80);
-DHT dht11;
+DHT dht11; // nazwa zmiennej dla czujnika
 
 void setup() {
-Serial.begin(115200);
+Serial.begin(115200); // predkosc przesylu
 delay(10);
 Serial.println();
-dht11.setup(pin);
-// Connect to WiFi network
-WiFi.mode(WIFI_STA);
+dht11.setup(pin); // ustawienie pinu 2 dla czujnika
+WiFi.mode(WIFI_STA); // inicjalizacja wifi
 Serial.println();
 Serial.println();
-Serial.print("Connecting to ");
+Serial.print("Connecting to "); // wypisanie ssid i hasla
 Serial.println(ssid);
-
 WiFi.begin(ssid, password);
-
-while (WiFi.status() != WL_CONNECTED) {
-delay(500);
-Serial.print(".");
-}
+while (WiFi.status() != WL_CONNECTED) 
+  {
+  delay(500);
+  Serial.print("."); // oczekiwanie na połączenie
+  }
 Serial.println("");
 Serial.println("WiFi dziala");
-
-// Start the server
-server.begin();
-
-// Print the IP address
-Serial.println(WiFi.localIP());
+server.begin(); // start serwera
+Serial.println(WiFi.localIP()); // wypisanie adresu ip serwera
 }
 
 void loop() {
- int wilgotnosc = dht11.getHumidity();
- int temperatura = dht11.getTemperature();
+ int wilgotnosc = dht11.getHumidity(); //  ustawienie wartosci z czujnika 
+ int temperatura = dht11.getTemperature(); 
 
-WiFiClient client = server.available();
+WiFiClient client = server.available(); // wczytanie fragmentu kodu html z warunkiem pokazania błędu odczytu.
 client.println("HTTP/1.1 200 OK");
 client.println("Content-Type: text/html");
 client.println("Connection: close");

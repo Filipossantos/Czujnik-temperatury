@@ -1,8 +1,8 @@
 #include <DHT.h>
 #include <ESP8266WiFi.h>
 
-const char* ssid     = "Orange_Swiatlowod_B18A";  // ssid sieci
-const char* password = "RLWW2604991";  // haslo
+const char* ssid     = "Android";  // ssid sieci
+const char* password = "12345678";  // haslo
 int pin = 2;
 WiFiServer server(80);
 DHT dht11; // nazwa zmiennej dla czujnika

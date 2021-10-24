@@ -30,3 +30,4 @@ C:\Users\domis_000\Desktop\Czujnik - Projekt\c#\GUI\bin\Debug\netcoreapp3.1\runt
 C:\Users\domis_000\Desktop\Czujnik - Projekt\c#\GUI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\domis_000\Desktop\Czujnik - Projekt\c#\GUI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\domis_000\Desktop\Czujnik - Projekt\c#\GUI\obj\Debug\netcoreapp3.1\GUI.Properties.Resources.resources
+C:\Users\domis_000\Desktop\Czujnik - Projekt\c#\GUI\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll

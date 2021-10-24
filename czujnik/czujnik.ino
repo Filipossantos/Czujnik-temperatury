@@ -54,9 +54,13 @@ client.print("</body>\n</html>");
 }
 else{
   client.print("Wilgotnosc (%)    : ");
+  client.println("<h1>");
 client.println((float)wilgotnosc, 1);
+ client.println("</h1>");
 client.print("Temperatura (°C)  : ");
+client.println("<h2>");
 client.println((float)temperatura, 1);
+client.println("</h2>");
 client.println("</pre>");
 client.print("</body>\n</html>");}
  delay(1000);

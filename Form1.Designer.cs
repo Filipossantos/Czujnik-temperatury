@@ -36,6 +36,7 @@ namespace GUI
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +58,7 @@ namespace GUI
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Wilgotność: ... %RH";
+            this.label2.Text = "Wilgotność: \n ... \n %RH";
             // 
             // label1
             // 
@@ -66,7 +67,7 @@ namespace GUI
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Temperatura: ... °C";
+            this.label1.Text = "Temperatura: \n ... \n °C";
             // 
             // progressBar1
             // 
@@ -74,7 +75,6 @@ namespace GUI
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(348, 41);
             this.progressBar1.TabIndex = 1;
-          
             // 
             // progressBar2
             // 
@@ -101,11 +101,22 @@ namespace GUI
             this.label3.TabIndex = 4;
             this.label3.Text = "Gotowy: ...";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(477, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 70);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "open";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
@@ -129,6 +140,7 @@ namespace GUI
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

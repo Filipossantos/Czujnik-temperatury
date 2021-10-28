@@ -54,20 +54,22 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(527, 40);
+            this.label2.Location = new System.Drawing.Point(528, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 15);
+            this.label2.Size = new System.Drawing.Size(73, 45);
             this.label2.TabIndex = 2;
             this.label2.Text = "Wilgotność: \n ... \n %RH";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 40);
+            this.label1.Location = new System.Drawing.Point(127, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 15);
+            this.label1.Size = new System.Drawing.Size(81, 45);
             this.label1.TabIndex = 1;
             this.label1.Text = "Temperatura: \n ... \n °C";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // progressBar1
             // 
@@ -82,6 +84,7 @@ namespace GUI
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(348, 41);
             this.progressBar2.TabIndex = 2;
+            this.progressBar2.Tag = "";
             // 
             // panel2
             // 
@@ -103,11 +106,11 @@ namespace GUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(477, 275);
+            this.button1.Location = new System.Drawing.Point(12, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 70);
             this.button1.TabIndex = 4;
-            this.button1.Text = "open";
+            this.button1.Text = "Odśwież";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

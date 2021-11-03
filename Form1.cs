@@ -1,17 +1,17 @@
 ﻿using HtmlAgilityPack;
 using System;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 namespace GUI
 {
 
-   
+
     public partial class Form1 : Form
     {
-        
-        public Form1()
+
+        int limit = 30;
+        public void Web_scraping()
         {
-            InitializeComponent();
             var html = @"http://192.168.43.254/";
             HtmlWeb web = new HtmlWeb();
             var htmlDoc = web.Load(html);
@@ -35,24 +35,27 @@ namespace GUI
             progressBar2.Minimum = 0;
             progressBar2.Maximum = 100;
             progressBar2.Value = hum;
-            if (temp>30)
+            if (temp > limit)
             {
                 this.label3.Text = "Zbyt wysoka temperatura";
-            } else
+            }
+            else
             {
                 this.label3.Text = "Gotowy do wyładowania";
             }
+            if (temp > limit)
+            {
+                this.BackColor = System.Drawing.Color.Red;
+            }
         }
-        private void Form1_load(object sendner, EventArgs e)
+        public Form1()
         {
-
-
+            InitializeComponent();
+            Web_scraping();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-          
-
+            Web_scraping();
         }
-
     }
 }

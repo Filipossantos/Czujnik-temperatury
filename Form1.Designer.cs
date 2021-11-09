@@ -33,7 +33,6 @@ namespace GUI
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,6 +42,12 @@ namespace GUI
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.zapisano = new System.Windows.Forms.Label();
+            this.Wyeksportowano = new System.Windows.Forms.Label();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,29 +92,21 @@ namespace GUI
             this.progressBar1.Size = new System.Drawing.Size(348, 41);
             this.progressBar1.TabIndex = 1;
             // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(440, 134);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(348, 41);
-            this.progressBar2.TabIndex = 2;
-            this.progressBar2.Tag = "";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(440, 209);
+            this.panel2.Location = new System.Drawing.Point(461, 238);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(348, 144);
+            this.panel2.Size = new System.Drawing.Size(277, 105);
             this.panel2.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Zurich WGL4 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(62, 48);
+            this.label3.Location = new System.Drawing.Point(21, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 21);
             this.label3.TabIndex = 4;
@@ -120,7 +117,7 @@ namespace GUI
             this.button1.Font = new System.Drawing.Font("Zurich WGL4 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(65, 209);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(226, 70);
+            this.button1.Size = new System.Drawing.Size(226, 33);
             this.button1.TabIndex = 4;
             this.button1.Text = "Odśwież";
             this.button1.UseVisualStyleBackColor = true;
@@ -139,12 +136,13 @@ namespace GUI
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Zurich WGL4 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(65, 299);
+            this.button2.Location = new System.Drawing.Point(65, 248);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(226, 70);
+            this.button2.Size = new System.Drawing.Size(226, 33);
             this.button2.TabIndex = 6;
             this.button2.Text = "   Zapisz pomiar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -186,12 +184,82 @@ namespace GUI
             this.label7.TabIndex = 10;
             this.label7.Text = "100%";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Zurich WGL4 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(65, 287);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(226, 33);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "   Eksport do .csv";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Zurich WGL4 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.Location = new System.Drawing.Point(65, 326);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(226, 33);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "O projekcie";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Zurich WGL4 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.Location = new System.Drawing.Point(65, 365);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(226, 33);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "Wyjście";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // zapisano
+            // 
+            this.zapisano.AutoSize = true;
+            this.zapisano.Font = new System.Drawing.Font("Zurich WGL4 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.zapisano.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.zapisano.Location = new System.Drawing.Point(297, 256);
+            this.zapisano.Name = "zapisano";
+            this.zapisano.Size = new System.Drawing.Size(58, 16);
+            this.zapisano.TabIndex = 14;
+            this.zapisano.Text = "Zapisano";
+            this.zapisano.Visible = false;
+            // 
+            // Wyeksportowano
+            // 
+            this.Wyeksportowano.AutoSize = true;
+            this.Wyeksportowano.Font = new System.Drawing.Font("Zurich WGL4 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Wyeksportowano.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Wyeksportowano.Location = new System.Drawing.Point(297, 295);
+            this.Wyeksportowano.Name = "Wyeksportowano";
+            this.Wyeksportowano.Size = new System.Drawing.Size(109, 16);
+            this.Wyeksportowano.TabIndex = 15;
+            this.Wyeksportowano.Text = "Wyeksportowano";
+            this.Wyeksportowano.Visible = false;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(440, 134);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(348, 41);
+            this.progressBar2.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.Wyeksportowano);
+            this.Controls.Add(this.zapisano);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -200,7 +268,6 @@ namespace GUI
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -222,7 +289,6 @@ namespace GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
@@ -232,6 +298,12 @@ namespace GUI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label zapisano;
+        private System.Windows.Forms.Label Wyeksportowano;
+        private System.Windows.Forms.ProgressBar progressBar2;
     }
 }
 

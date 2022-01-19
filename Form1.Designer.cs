@@ -48,9 +48,11 @@ namespace GUI
             this.zapisano = new System.Windows.Forms.Label();
             this.Wyeksportowano = new System.Windows.Forms.Label();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.dataGridVie = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVie)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,16 +99,16 @@ namespace GUI
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(461, 238);
+            this.panel2.Location = new System.Drawing.Point(403, 197);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(277, 105);
+            this.panel2.Size = new System.Drawing.Size(443, 61);
             this.panel2.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Zurich WGL4 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(64, 39);
+            this.label3.Location = new System.Drawing.Point(141, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 21);
             this.label3.TabIndex = 4;
@@ -128,7 +130,7 @@ namespace GUI
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(440, 12);
+            this.panel3.Location = new System.Drawing.Point(478, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(348, 100);
             this.panel3.TabIndex = 5;
@@ -168,7 +170,7 @@ namespace GUI
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Zurich WGL4 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(440, 177);
+            this.label6.Location = new System.Drawing.Point(478, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 16);
             this.label6.TabIndex = 9;
@@ -178,7 +180,7 @@ namespace GUI
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Zurich WGL4 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(762, 178);
+            this.label7.Location = new System.Drawing.Point(786, 177);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 16);
             this.label7.TabIndex = 10;
@@ -243,17 +245,30 @@ namespace GUI
             // 
             // progressBar2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(440, 134);
+            this.progressBar2.Location = new System.Drawing.Point(478, 134);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(348, 41);
             this.progressBar2.TabIndex = 16;
+            // 
+            // dataGridVie
+            // 
+            this.dataGridVie.AllowUserToAddRows = false;
+            this.dataGridVie.AllowUserToDeleteRows = false;
+            this.dataGridVie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridVie.Location = new System.Drawing.Point(403, 264);
+            this.dataGridVie.Name = "dataGridVie";
+            this.dataGridVie.ReadOnly = true;
+            this.dataGridVie.RowTemplate.Height = 25;
+            this.dataGridVie.Size = new System.Drawing.Size(443, 175);
+            this.dataGridVie.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(852, 450);
+            this.Controls.Add(this.dataGridVie);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.Wyeksportowano);
             this.Controls.Add(this.zapisano);
@@ -278,6 +293,7 @@ namespace GUI
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVie)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,6 +320,7 @@ namespace GUI
         private System.Windows.Forms.Label zapisano;
         private System.Windows.Forms.Label Wyeksportowano;
         private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.DataGridView dataGridVie;
     }
 }
 

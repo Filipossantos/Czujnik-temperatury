@@ -14,7 +14,6 @@ namespace GUI
         int temp, hum;
         string folderName = @"pomiar.txt";
         string folderName2 = @"pomiar.csv";
-        int ID = 0;
         public void Web_scraping()
         {
             try
